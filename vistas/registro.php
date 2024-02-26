@@ -13,13 +13,13 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="estilos/estilos.css" rel="stylesheet">
+    <link href="assets/css/estilos.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
       </symbol>
@@ -33,70 +33,20 @@
       <symbol id="sun-fill" viewBox="0 0 16 16">
         <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
       </symbol>
-    </svg>    
+    </svg>     -->
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
 
 
-  <!-- HEADER (en la cabecera hay que agregar el logo) -->
-  <header class="mb-auto"> 
-    <div>
-      <h3 class="float-md-start mb-0">JobWheels</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Inicio</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Registro</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contacto</a>
-      </nav>
-    </div>
-  </header>
-  <!-- HEADER -->
-
-
-<!-- MAIN (hay que adaptar el main de cada página)-->
-
-<!-- BIENVENIDO -->
-  <main class="px-3">
-    <h1>Bienvenido</h1>
-    <p class="lead">¿Cómo desea iniciar sesión?</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Empresa</a>
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Conductor</a>
-    </p>
-    <p class="lead">¿Aún no tienes cuenta?</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
-    </p>
-  <!-- BIENVENIDO -->
-
-  <!-- LOGIN -->
-    <form>
-      <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
-      <h1>Login</h1>
-      <h1 class="h3 mb-3 fw-normal">Introduzca usuario y contraseña</h1>
+  <?php
   
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Usuario</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Contraseña</label>
-      </div>
+  include_once "./vistas/includes/header.php";
   
-      <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Recuerdame
-        </label>
-      </div>
-      <button class="btn btn-primary w-100 py-2" type="submit">Aceptar</button>
-      <button class="btn btn-primary w-100 py-2" type="submit">Cancelar</button>
-    </form>
-  <!-- LOGIN -->
+  ?>
 
-  <!-- REGISTRO -->  
-  <form>
-    <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
+<!-- REGISTRO -->  
+<form>
+    <!-- <img class="mb-4" src="../assets/img/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
     <h1>Registro</h1>
     <h3 class="h3 mb-3 fw-normal">Introduzca los siguientes datos</h3>
 
@@ -126,20 +76,8 @@
   </form>
   <!-- REGISTRO -->
 
+  <?php
   
-  </main>
-<!-- MAIN -->
-
-
-<!-- FOOTER -->
-  <footer class="mt-auto text-white-50">
-    <p>JobWheels Inc, por Grupo 21.</p>
-  </footer>
-<!-- FOOTER -->
-
-
-</div>
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    </body>
-</html>
+  include_once "./vistas/includes/footer.php";
+  
+  ?>
