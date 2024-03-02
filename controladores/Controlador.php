@@ -27,7 +27,10 @@ class Controlador{
         //ucfirst es un método que pone la primera letra en mayúscula, las clases empiezan con mayúscula
         //si el controlador está mal me redirigirá al controlador de incio, que ejecutará la vista inicio
         if(file_exists("./controladores/".ucfirst($controlador)."Controlador.php")){
-            echo "------SI existe el controlador";
+            //echo "------SI existe el controlador";
+            require_once ("./controladores/".ucfirst($controlador)."Controlador.php");
+            $nombreClase = ucfirst($controlador)."Controlador";
+            $contro = new $nombreClase();
         }else{
             require_once ("./controladores/InicioControlador.php");
             $contro = new InicioControlador();

@@ -57,7 +57,7 @@
     </p>
     <p class="lead">¿Aún no tienes cuenta?</p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
+      <a href="vistas/registro.php" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
     </p>
   <!-- BIENVENIDO -->
   </main>

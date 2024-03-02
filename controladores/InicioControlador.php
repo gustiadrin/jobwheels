@@ -7,7 +7,7 @@ class InicioControlador{
 
         require_once ("./vistas/Vista.php");
         $vista = new Vista();
-        $vista->render("login", array());
+        $vista->render("registro", array());
 
     }
 }
