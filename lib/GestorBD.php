@@ -17,9 +17,9 @@ class GestorBD{
         }
     }
 
-    public function getConductor($dni){
-        $sql = "SELECT * FROM conductor WHERE dni=$dni";
-
+    public function getConductorDni($dni){
+        $sql = "SELECT * FROM conductor WHERE dni='".$dni."'";
+        
         $data=array();
 
         $result = $this->conexion->query($sql);

@@ -11,7 +11,11 @@ class LoginConductorModelo{
         $gbd = new GestorBD;
 
         if($gbd->conectar()){
-            echo "me he conectado";
+            if($gbd->getConductorDni($codigo)){;
+               return true;
+            }else{
+                return false;
+            }
         }else{
             echo "error de conexion";
         }

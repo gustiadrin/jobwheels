@@ -45,13 +45,12 @@
   ?>
 
 <!-- LOGIN -->
-<form action="http://localhost/ProyectoDAW/jobwheels/index.php?controlador=loginConductor&accion=logearse" method="GET">
-      <!-- <img class="mb-4" src="../assets/img/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
+<form action="http://localhost/ProyectoDAW/jobwheels/index.php?controlador=loginConductor&accion=logearse" method="POST">
       <h1>Login</h1>
       <h1 class="h3 mb-3 fw-normal">Introduzca DNI y contraseña</h1>
   
       <div class="form-floating">
-        <input type="text" class="form-control" id="dni" placeholder="DNI">
+        <input type="text" class="form-control" name="dni" placeholder="DNI">
         <label for="floatingInput">DNI</label>
       </div>
       <div class="form-floating">
@@ -60,16 +59,13 @@
       </div>
   
       <div class="form-check text-start my-3">
-        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Recuerdame
-        </label>
+        
       </div>
-      <input type="hidden" name="controlador" value="loginConductor">
-      <input type="hidden" name="accion" value="logearse">
       <button class="btn btn-primary w-100 py-2" type="submit">Aceptar</button>
       <button class="btn btn-primary w-100 py-2" type="submit">Cancelar</button>
     </form>
+    
+    
   <!-- LOGIN -->
 
   <?php

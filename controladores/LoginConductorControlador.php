@@ -14,19 +14,25 @@ class LoginConductorControlador{
         //Esta acción deberá:
         //Acceder al modelo
  
-        echo "estoy en login Conductor";
- 
         //Acceder a la vista
         require_once("./vistas/Vista.php");
         $vista = new Vista();
-
         $vista->render("loginConductor",array());
+        
      }
     
      public function logearse(){
+        $dni=$_POST["dni"];
         require_once("./modelos/LoginConductorModelo.php");
         $modelo = new LoginConductorModelo();
-        $modelo->getConductor("1234");
+
+        if($modelo->getConductor($dni)){
+            echo "deberíamos mostrar el perfil del conductor";
+        }else{
+            require_once("./vistas/Vista.php");
+            $vista = new Vista();
+            $vista->render("loginConductor",array());
+        }
      }
 }
 
