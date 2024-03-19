@@ -30,7 +30,14 @@ class Controlador{
             //echo "----SI existe el controlador";
             require_once ("./controladores/".ucfirst($controlador)."Controlador.php");
             $nombreClase = ucfirst($controlador)."Controlador";
+            
             $contro = new $nombreClase();
+            if($accion!=""){
+                $contro->$accion();
+            }else{
+                echo "error 404";
+            }
+
         }else{
             require_once ("./controladores/InicioControlador.php");
             $contro = new InicioControlador();

@@ -44,26 +44,35 @@
   
   ?>
 
+<!-- LOGIN -->
+<form action="http://localhost/ProyectoDAW/jobwheels/index.php?controlador=loginConductor&accion=logearse" method="GET">
+      <!-- <img class="mb-4" src="../assets/img/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
+      <h1>Login</h1>
+      <h1 class="h3 mb-3 fw-normal">Introduzca DNI y contraseña</h1>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="dni" placeholder="DNI">
+        <label for="floatingInput">DNI</label>
+      </div>
+      <div class="form-floating">
+        <input type="contrasena" class="form-control" id="contrasena" placeholder="Contraseña">
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+  
+      <div class="form-check text-start my-3">
+        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Recuerdame
+        </label>
+      </div>
+      <input type="hidden" name="controlador" value="loginConductor">
+      <input type="hidden" name="accion" value="logearse">
+      <button class="btn btn-primary w-100 py-2" type="submit">Aceptar</button>
+      <button class="btn btn-primary w-100 py-2" type="submit">Cancelar</button>
+    </form>
+  <!-- LOGIN -->
 
-<!-- MAIN (hay que adaptar el main de cada página)-->
-
-<!-- BIENVENIDO -->
-  <main class="px-3">
-    <h1>Bienvenido</h1>
-    <p class="lead">¿Cómo desea iniciar sesión?</p>
-    <p class="lead">
-      <a href="http://localhost/ProyectoDAW/jobwheels/index.php?controlador=loginEmpresa&accion=verLogin" class="btn btn-lg btn-light fw-bold border-white bg-white">Empresa</a>
-      <a href="http://localhost/ProyectoDAW/jobwheels/index.php?controlador=loginConductor&accion=verLogin" class="btn btn-lg btn-light fw-bold border-white bg-white">Conductor</a>
-    </p>
-    <p class="lead">¿Aún no tienes cuenta?</p>
-    <p class="lead">
-      <a href="vistas/registro.php" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
-    </p>
-  <!-- BIENVENIDO -->
-  </main>
-<!-- MAIN -->
-
-<?php
+  <?php
   
   include_once "./vistas/includes/footer.php";
   

@@ -48,7 +48,7 @@
 <form>
       <!-- <img class="mb-4" src="../assets/img/bootstrap-logo.svg" alt="" width="72" height="57"> (aqui debería ir nuestro logo)-->
       <h1>Login</h1>
-      <h1 class="h3 mb-3 fw-normal">Introduzca usuario y contraseña</h1>
+      <h1 class="h3 mb-3 fw-normal">Introduzca CIF y contraseña</h1>
   
       <div class="form-floating">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
