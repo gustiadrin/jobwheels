@@ -17,18 +17,33 @@ class GestorBD{
         }
     }
 
-    public function getConductorDni($dni){
+    public function existeConductor($dni){
         $sql = "SELECT * FROM conductor WHERE dni='".$dni."'";
         
-        $data=array();
 
-        $result = $this->conexion->query($sql);
+        $resultadoConsulta = $this->conexion->query($sql);
 
-        if($result->num_rows>0){
+        if($resultadoConsulta->num_rows>0){
             return true;
         }else{
             return false;
         }
+    }
+
+    public function getConductorDni($dni){
+        $sql = "SELECT * FROM conductor WHERE dni='".$dni."'";
+
+        $data = array();
+
+        $resultadoConsulta = $this->conexion->query($sql);
+
+        if($resultadoConsulta->num_rows>0){
+            while($row = $resultadoConsulta->fetch_assoc()){
+                $data[] = $row;
+            }
+        }
+
+        return $data;
     }
 
 }

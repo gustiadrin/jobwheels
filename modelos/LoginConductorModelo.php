@@ -6,12 +6,12 @@ class LoginConductorModelo{
         $this->var = $var;
     }
 
-    public function getConductor($codigo){
+    public function validar($codigo){
         require_once("./lib/GestorBD.php");
         $gbd = new GestorBD;
 
         if($gbd->conectar()){
-            if($gbd->getConductorDni($codigo)){;
+            if($gbd->existeConductor($codigo)){;
                return true;
             }else{
                 return false;
