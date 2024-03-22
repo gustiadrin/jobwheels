@@ -11,7 +11,7 @@ class LoginConductorModelo{
         $gbd = new GestorBD;
 
         if($gbd->conectar()){
-            if($gbd->existeConductor($codigo)){;
+            if($gbd->existeConductor($codigo)){
                return true;
             }else{
                 return false;

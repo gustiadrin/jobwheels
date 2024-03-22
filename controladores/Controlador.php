@@ -35,7 +35,7 @@ class Controlador{
             if($accion!=""){
                 $contro->$accion();
             }else{
-                echo "error 404";
+                //echo "error 404";
             }
 
         }else{

@@ -41,19 +41,14 @@
         <th scope="row" class="text-start">Nombre: </th>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo $data[0]["nombre"];?></td>
       </tr>
       <tr>
 
-      <?php
-        echo"<pre>";
-        print_r($datosConductor);
-        echo"</pre>";
-      ?>
         <th scope="row" class="text-start">DNI</th>
         <td></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo $data[0]["dni"];?></td>
       </tr>
     </tbody>
 
@@ -62,22 +57,25 @@
         <th scope="row" class="text-start">Ciudad</th>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo $data[0]["ciudad"];?></td>
       </tr>
       <tr>
         <th scope="row" class="text-start">Disponible</th>
         <td></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo ($data[0]["disponible"]=(0) ? "Si" : "No");?></td>
       </tr>
       <tr>
         <th scope="row" class="text-start">Presentación</th>
         <td></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo $data[0]["presentacion"];?></td>
       </tr>
     </tbody>
   </table>
+  <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php?controlador=actualizarConductor&accion=verActualizar'">Actualizar perfil</button>
+  <button class="btn btn-primary w-100 py-2" type="button">Lista de empresas</button>
+  <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php'">Cerrar sesión</button>
 </div>
   </main>
 

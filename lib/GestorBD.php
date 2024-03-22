@@ -46,6 +46,12 @@ class GestorBD{
         return $data;
     }
 
+
+    public function updateConductor($dni, $nombre, $telefono, $ciudad, $disponible, $presentacion){
+        $sql = "UPDATE `conductor` SET `nombre`='".$nombre."',`telefono`='".$telefono."',`ciudad`='".$ciudad."',`disponible`='".$disponible."',`presentacion`='".$presentacion."' WHERE dni='".$dni."'";  
+        $this->conexion->query($sql);
+    }
+
 }
 
 ?>

@@ -50,7 +50,7 @@
         ?>
       </div>
       <button class="btn btn-primary w-100 py-2" type="submit">Aceptar</button>
-      <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='http://localhost/ProyectoDAW/jobwheels/index.php'">Cancelar</button>
+      <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php'">Cancelar</button>
     </form>
     
     

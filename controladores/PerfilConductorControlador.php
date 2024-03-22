@@ -18,11 +18,7 @@ class PerfilConductorControlador{
 
         require_once("./modelos/PerfilConductorModelo.php");
         $modelo = new PerfilConductorModelo();
-        $datosConductor = $modelo->getConductor($dni);
-
-        // echo"<pre>";
-        // print_r($datosConductor);
-        // echo"</pre>";
+        $datosConductor = $modelo->getConductor($dni);       
        
         //Acceder a la vista
         require_once("./vistas/Vista.php");
