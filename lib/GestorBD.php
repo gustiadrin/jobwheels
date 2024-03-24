@@ -17,9 +17,8 @@ class GestorBD{
         }
     }
 
-    public function existeConductor($dni, $contrasena){
-        $sql = "SELECT * FROM conductor WHERE dni='".$dni."' AND contrasena='".$contrasena."'";
-        
+    public function existeConductor($dni){
+        $sql = "SELECT * FROM conductor WHERE dni='".$dni."'"; 
 
         $resultadoConsulta = $this->conexion->query($sql);
 
@@ -30,10 +29,9 @@ class GestorBD{
         }
     }
 
-    public function existeEmpresa($cif, $contrasena){
-        $sql = "SELECT * FROM empresa WHERE cif='".$cif."' AND contrasena='".$contrasena."'";
+    public function existeEmpresa($cif){
+        $sql = "SELECT * FROM empresa WHERE cif='".$cif."'";
         
-
         $resultadoConsulta = $this->conexion->query($sql);
 
         if($resultadoConsulta->num_rows>0){
