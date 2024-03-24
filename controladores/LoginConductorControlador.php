@@ -22,12 +22,13 @@ class LoginConductorControlador{
      }
     
      public function logearse(){
-        if(isset($_POST["dni"]) && !empty($_POST["dni"])){
-            $dni=$_POST["dni"];
+        if((isset($_POST["dni"]) && !empty($_POST["dni"])) && (isset($_POST["contrasena"]) && !empty($_POST["contrasena"]))){
+            $dni = $_POST["dni"];
+            $contrasena = $_POST["contrasena"];
             require_once("./modelos/LoginConductorModelo.php");
             $modelo = new LoginConductorModelo();
 
-            if($modelo->validar($dni)){
+            if($modelo->validar($dni, $contrasena)){
                 //Esto crea la sesión
                 require_once("./lib/GestorSesion.php");
                 $sesion = new GestorSesion();
@@ -40,7 +41,7 @@ class LoginConductorControlador{
                 // }
                 header("Location: index.php?controlador=perfilConductor&accion=verPerfilConductor");
             }else{
-                $data["errorLogin"]="El usuario no existe";
+                $data["errorLogin"]="Error en usuario o contraseña, vuelva a intentarlo";
                 require_once("./vistas/Vista.php");
                 $vista = new Vista();
                 $vista->render("loginConductor",$data);

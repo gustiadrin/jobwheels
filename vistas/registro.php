@@ -22,23 +22,21 @@
  
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-
 <?php
-  
   include_once "./vistas/includes/header.php";
-  
   ?>
-  </header>
+
+</header>
 
 
 <!-- REGISTRO -->  
-<form action="./controladores/RegistroControlador.php" method="POST" id="formularioRegistro">
+<form action="index.php?controlador=registro&accion=validarRegistro" method="POST">
     <h1>Registro</h1>
     <h3 class="h3 mb-3 fw-normal">Introduzca los siguientes datos</h3>
 
     <div class="form-floating">
-      <input type="texto" class="form-control" id="user" placeholder="Usuario" name="user">
-      <label for="user">Usuario</label>
+      <input type="text" class="form-control" id="user" placeholder="Usuario" name="user">
+      <label for="user">DNI/CIF</label>
     </div>
     <div class="form-floating">
       <input type="password" class="form-control" id="pass" placeholder="Contraseña" name="pass">
@@ -46,23 +44,29 @@
     </div>
 
     <div class="form-check text-start my-3">
-      <input class="form-check-input" type="radio" id="empresa" name="radioEmpresa">
+      <input class="form-check-input" type="checkbox" id="empresa" name="checkEmpresa">
       <label class="form-check-label" for="empresa">
         Empresa
       </label>
     </div>
     <div class="form-check text-start my-3">
-      <input class="form-check-input" type="radio" id="conductor" name="radioConductor">
+      <input class="form-check-input" type="checkbox" id="conductor" name="checkConductor">
       <label class="form-check-label" for="conductor">
         Conductor
       </label>
     </div>
     <div>
-      <p class="warning" id="resultado"></p>
+      <p class="warning" id="resultado">
+        <?php
+          if(isset($data["errorLogin"])){
+            echo $data["errorLogin"];
+          }
+        ?>
+      </p>
     </div>
-    <button class="btn btn-primary w-100 py-2" type="button" onclick="validarRegistro()">Crear</button>
-    <button class="btn btn-primary w-100 py-2" type="button">Cancelar</button>
+    <button class="btn btn-primary w-100 py-2" type="submit">Crear</button>
   </form>
+  <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php'">Cancelar</button>
   <!-- REGISTRO -->
 
   

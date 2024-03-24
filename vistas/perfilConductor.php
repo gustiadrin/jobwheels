@@ -63,7 +63,7 @@
         <th scope="row" class="text-start">Disponible</th>
         <td></td>
         <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo ($data[0]["disponible"]=(0) ? "Si" : "No");?></td>
+        <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg><?php echo ($data[0]["disponible"] == 1) ? "No" : "Si";?></td>
       </tr>
       <tr>
         <th scope="row" class="text-start">Presentación</th>
@@ -74,7 +74,7 @@
     </tbody>
   </table>
   <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php?controlador=actualizarConductor&accion=verActualizar'">Actualizar perfil</button>
-  <button class="btn btn-primary w-100 py-2" type="button">Lista de empresas</button>
+  <button class="btn btn-primary w-100 py-2" type="button"onclick="window.location.href='index.php?controlador=listaEmpresas&accion=verEmpresas'">Lista de empresas</button>
   <button class="btn btn-primary w-100 py-2" type="button" onclick="window.location.href='index.php'">Cerrar sesión</button>
 </div>
   </main>

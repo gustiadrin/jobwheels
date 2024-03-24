@@ -38,7 +38,7 @@
         <label for="floatingInput">DNI</label>
       </div>
       <div class="form-floating">
-        <input type="contrasena" class="form-control" id="contrasena" placeholder="Contraseña">
+        <input type="contrasena" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña">
         <label for="floatingPassword">Contraseña</label>
       </div>
   

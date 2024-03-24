@@ -40,8 +40,8 @@
       </div>
       <div class="form-floating">
       <br>
-      <label for="disponible">Estás disponible?</label>
-        <input type="radio" id="disponible" name="disponibilidad"><label for="disponible">
+      <label for="disponible">¿Estás ocupado? (Marca la casilla únicamente si estás trabajando)</label><br>
+        <input type="checkbox" id="disponible" name="disponibilidad"><label for="disponible">
       </div>
       <div class="form-floating">
         <label for="presentacion">Presentación:</label><br>

@@ -33,14 +33,22 @@
   <main class="px-3">
     <h1>Bienvenido</h1>
     <p class="lead">¿Cómo desea iniciar sesión?</p>
+    <div class="warning">
+        <?php
+          if(isset($data["errorLogin"])){
+            echo $data["errorLogin"];
+          }
+        ?>
+      </div>
     <p class="lead">
       <a href="index.php?controlador=loginEmpresa&accion=verLogin" class="btn btn-lg btn-light fw-bold border-white bg-white">Empresa</a>
       <a href="index.php?controlador=loginConductor&accion=verLogin" class="btn btn-lg btn-light fw-bold border-white bg-white">Conductor</a>
     </p>
     <p class="lead">¿Aún no tienes cuenta?</p>
     <p class="lead">
-      <a href="vistas/registro.php" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
+      <a href="index.php?controlador=registro&accion=verRegistro" class="btn btn-lg btn-light fw-bold border-white bg-white">Regístrate aquí</a>
     </p>
+    
   <!-- BIENVENIDO -->
   </main>
 

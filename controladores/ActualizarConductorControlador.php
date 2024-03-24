@@ -16,7 +16,6 @@ class ActualizarConductorControlador{
 
     public function actualizarConductor(){
 
-        echo $_POST["disponibilidad"];
 
         require_once("./lib/GestorSesion.php");
         $sesion = new GestorSesion();
@@ -48,7 +47,7 @@ class ActualizarConductorControlador{
             $ciudad="";
         }
 
-        if($_POST["disponibilidad"]="on"){
+        if(isset($_POST["disponibilidad"]) && $_POST["disponibilidad"]="on"){
             $disponible=1;
         }else{
             $disponible=0;
