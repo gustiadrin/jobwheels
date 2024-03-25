@@ -58,8 +58,8 @@
     <div>
       <p class="warning" id="resultado">
         <?php
-          if(isset($data["errorLogin"])){
-            echo $data["errorLogin"];
+          if(isset($data["errorRegistro"])){
+            echo $data["errorRegistro"];
           }
         ?>
       </p>

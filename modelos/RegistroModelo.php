@@ -14,12 +14,14 @@
 
                 if($gbd->existeConductor($dni)){
                     return false;
-                }else{
-                    $gbd->insertConductor($dni, $contrasena);
-                    return true;
                 }
 
-                
+                if($gbd->insertConductor($dni, $contrasena)){
+                    return true;
+                }else{
+                    return false;
+                }
+                    
             }else{
                 echo "Error de conexión";
             }
@@ -34,9 +36,12 @@
 
                 if($gbd->existeEmpresa($cif)){
                     return false;
-                }else{
-                    $gbd->insertEmpresa($cif, $contrasena);
+                }
+
+                if($gbd->insertEmpresa($cif, $contrasena)){
                     return true;
+                }else{
+                    return false;
                 }
                 
             }else{

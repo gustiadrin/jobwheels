@@ -8,7 +8,7 @@ class LoginEmpresaControlador{
 
     //Primero definimos las acciones que hará el controlador
     //Acción 1:
-    public function logearse(){
+    public function verLogin(){
        //Esta acción deberá:
        //Acceder al modelo
 

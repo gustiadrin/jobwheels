@@ -61,9 +61,13 @@ class ActualizarConductorControlador{
 
         include_once("./modelos/ActualizarConductorModelo.php");
         $modelo = new ActualizarConductorModelo();
-        $modelo->actulizarConductor($dni, $nombre, $telefono, $ciudad, $disponible, $presentacion);
+        if($modelo->actulizarConductor($dni, $nombre, $telefono, $ciudad, $disponible, $presentacion)){
+            header("Location: index.php?controlador=perfilConductor&accion=verPerfilConductor");
+        }else{
+            echo "Gestionar el error";
+        }
 
-        header("Location: index.php?controlador=perfilConductor&accion=verPerfilConductor");
+        
 
     }
 

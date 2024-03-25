@@ -12,7 +12,13 @@
             $gbd = new GestorBD();
 
             if($gbd->conectar()){
-                $gbd->updateConductor($dni, $nombre, $telefono, $ciudad, $disponible, $presentacion);
+
+                if($gbd->updateConductor($dni, $nombre, $telefono, $ciudad, $disponible, $presentacion)){
+                    return true;
+                }else{
+                    return false;
+                }
+                
             }else{
                 echo "error de conexión con BD";
             }
